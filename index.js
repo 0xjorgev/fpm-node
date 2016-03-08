@@ -12,8 +12,9 @@ app.get('/', function(response, request){
 
 	https.get(options, function(res){
 		console.log('Response status', res.status);
+		response.send(res.status);
 	});
-	response.send(res.status);
+	//////////////////
 });
 
 app.listen('3000', function(){
