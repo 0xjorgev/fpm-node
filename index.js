@@ -17,10 +17,10 @@ app.get('/', function(request, response){
 		if (res.statusCode == 502 ){
 			console.log('php-fpm is down, websites are down');
 			response.send({message:'php-fpm is down, websites are down'});
+		} else {
+			response.send({message:'Ok!'});
 		}
 	})
-
-	response.send({message:'Ok!'});
 });
 
 app.listen('3000', function(){
