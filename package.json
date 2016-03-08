@@ -1,0 +1,16 @@
+{
+  "name": "php-fpm-node",
+  "version": "1.0.0",
+  "description": "A simple hack to keep alive websites with php",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge Mendoza",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "http": "0.0.0",
+    "https": "^1.0.0"
+  }
+}
