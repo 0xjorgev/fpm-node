@@ -14,7 +14,7 @@ app.get('/', function(request, response){
 
 	https.get(options, function(res){
 		console.log('Response status', res.status);
-		response.send(res.status);
+		//response.send(res.status);
 	});
 
 	response.send({message:'Ok!'});
