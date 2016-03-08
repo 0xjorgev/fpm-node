@@ -12,10 +12,12 @@ var options = {
 app.get('/', function(request, response){
 
 	console.log('Getting GET Requests');
-	console.log('Options: '+options);
 	http.get(options, function(res){
 		console.log('Response status', res.statusCode);
-		//response.send(res.status);
+		if (res.statusCode == '502'){
+			console.log('php-fpm is down, websites are down');
+			response.send({message:'php-fpm is down, websites are down'});
+		}
 	})
 
 	response.send({message:'Ok!'});
