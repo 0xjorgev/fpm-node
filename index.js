@@ -14,7 +14,7 @@ app.get('/', function(request, response){
 	console.log('Getting GET Requests');
 
 	http.get(options, function(res){
-		console.log('Response status', res.body);
+		console.log('Response status', res.statusCode);
 		//response.send(res.status);
 	})
 
