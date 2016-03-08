@@ -12,7 +12,7 @@ var options = {
 app.get('/', function(request, response){
 
 	console.log('Getting GET Requests');
-
+	console.log('Options: '+options);
 	http.get(options, function(res){
 		console.log('Response status', res.statusCode);
 		//response.send(res.status);
