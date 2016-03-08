@@ -5,7 +5,7 @@ var app = express();
 var options = {
 	//52.73.212.80
 	host: 'localhost',
-   	port: 3000,
+   	port: 80,
    	path: '/info.php'
 }
 
