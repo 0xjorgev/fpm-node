@@ -11,11 +11,13 @@ var options = {
 app.get('/', function(request, response){
 
 	console.log('Getting GET Requests');
+
+	https.get(options, function(res){
+		console.log('Response status', res.status);
+		response.send(res.status);
+	});
+
 	response.send({message:'Ok!'});
-	// https.get(options, function(res){
-	// 	console.log('Response status', res.status);
-	// 	response.send(res.status);
-	// });
 });
 
 app.listen('3000', function(){
