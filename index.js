@@ -8,7 +8,7 @@ var options = {
    	path: '/info.php'
 }
 
-app.get('/', function(response, request){
+app.get('/', function(request, response){
 
 	console.log('Getting GET Requests');
 	response.send({message:'Ok!'});
