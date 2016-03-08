@@ -14,7 +14,7 @@ app.get('/', function(request, response){
 	console.log('Getting GET Requests');
 	http.get(options, function(res){
 		console.log('Response status', res.statusCode);
-		if (res.statusCode == '502'){
+		if (res.statusCode == 502 ){
 			console.log('php-fpm is down, websites are down');
 			response.send({message:'php-fpm is down, websites are down'});
 		}
