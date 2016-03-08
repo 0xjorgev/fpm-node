@@ -1,5 +1,5 @@
 var express = require('express');
-var https = require('https');
+var http = require('http');
 var app = express();
 
 var options = {
@@ -13,12 +13,10 @@ app.get('/', function(request, response){
 
 	console.log('Getting GET Requests');
 
-	https.get(options, function(res){
+	http.get(options, function(res){
 		console.log('Response status', res.status);
 		//response.send(res.status);
-	}).catch(function(err){
-		console.log('Response Error', err.description);
-	});
+	})
 
 	response.send({message:'Ok!'});
 });
